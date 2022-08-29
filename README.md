@@ -7,6 +7,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
-- [EJS](https://ejs.co/)
-- [Bootstrap](https://getbootstrap.com/)
+- [Express] (https://expressjs.com/)
 - [SQLite](https://www.sqlite.org/index.html)
