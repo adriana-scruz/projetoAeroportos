@@ -1,11 +1,12 @@
 -- Criando a tabela de aeroportos
-CREATE TABLE IF EXISTS airports;
+DROP TABLE IF EXISTS airports;
+
 CREATE TABLE airports (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL UNIQUE,
     initials TEXT NOT NULL,
     city TEXT NOT NULL,
-    state, TEXT NOT NULL
+    state TEXT NOT NULL
 );
 
 INSERT INTO airports (name, initials, city, state)
