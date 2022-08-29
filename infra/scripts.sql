@@ -1,0 +1,1 @@
+-- Criando a tabela de aeroportos
