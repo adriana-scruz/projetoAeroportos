@@ -24,7 +24,7 @@ app.get("/flight/:from/:to", (req, res) => {
   console.log(fromParam);
   console.log(toParam);
 
-  db.get(
+  db.all(
     `SELECT * FROM airports WHERE initials = ? OR initials = ?;`,
     fromParam,
     toParam,
@@ -39,6 +39,14 @@ app.get("/flight/:from/:to", (req, res) => {
           errorMessage: "Aeroporto não encontrado",
         });
       }
+
+      const Percurso = {
+        Origem: row[1].initials,
+        Destino: row[0].initials,
+        Descrição: `Voo partindo do ${row[1].name} até ${row[0].name}`,
+      };
+
+      return res.json({ Percurso });
     }
   );
 });
