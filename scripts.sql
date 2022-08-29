@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS airports;
 
 CREATE TABLE airports (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
     initials TEXT NOT NULL,
     city TEXT NOT NULL,
     state TEXT NOT NULL
@@ -115,5 +115,6 @@ INSERT INTO airports (name, initials, city, state)
 VALUES ('Aeroporto de Montes Claros/Mário Ribeiro','MOC','Montes Claros', 'MG');
 
 
+SELECT * FROM airports;
 
-
+SELECT * FROM airports WHERE initials = 'SSA' OR initials = 'FEN';
